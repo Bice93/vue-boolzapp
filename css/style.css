@@ -17,26 +17,24 @@ main{
 }
 
 .ms_container{
-    background-color: lightblue;
     height: calc(100vh - 50px);
     /* overflow: auto; */
     position: relative;
     bottom: 75px;
 }
 
-.ms_left_structure{
+/* .ms_left_structure{
     background-color: lightcoral;
     border: 1px solid black;
     padding: 0;
 }
 
 .ms_right_structure{
-    background-color: lightcyan;
     border: 1px solid black;
     padding: 0;
-}
+} */
 
-.header_myAccount, .header_chat{
+.header_myAccount, .header_chat, .footer_chat{
     width: 100%;
     background-color: rgb(234, 234, 234);
     padding: 5px 10px;
@@ -84,5 +82,15 @@ main{
 .info_time{
     width: 10%;
     font-size: 13px;
+}
+
+.main_chat{
+    height: calc(100vh - 50px - 60px - 60px);
+    background-image: url("../img/mine.jpg");
+}
+
+.footer_chat{
+    text-align: center;
+    background-color: #f3eeea;
 }
 
