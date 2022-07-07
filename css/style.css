@@ -19,6 +19,70 @@ main{
 .ms_container{
     background-color: lightblue;
     height: calc(100vh - 50px);
+    /* overflow: auto; */
     position: relative;
     bottom: 75px;
 }
+
+.ms_left_structure{
+    background-color: lightcoral;
+    border: 1px solid black;
+    padding: 0;
+}
+
+.ms_right_structure{
+    background-color: lightcyan;
+    border: 1px solid black;
+    padding: 0;
+}
+
+.header_myAccount, .header_chat{
+    width: 100%;
+    background-color: rgb(234, 234, 234);
+    padding: 5px 10px;
+    height: 60px;
+}
+
+.avatar_header{
+    width: 70%;
+    font-size: 13px;
+}
+
+.img_avatar, .box_icon{
+    width: 50px;
+}
+
+.info{
+    width: 100%;
+    font-size: 13px;
+    padding-left: 5px;
+}
+
+.icon_header{
+    width: 30%;
+    text-align: end;
+}
+
+.notice{
+    height: 70px;
+    padding: 0 10px;
+    background-color: #8edafc;
+}
+
+.input_searchAccount{
+    background-color: #fafafa;
+    padding: 5px;
+    height: 40px;
+}
+
+.list_chat{
+    height: calc(100vh - 50px - 60px - 70px - 40px);
+    background-color: white;
+    overflow: auto;
+}
+
+.info_time{
+    width: 10%;
+    font-size: 13px;
+}
+
