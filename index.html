@@ -116,8 +116,8 @@
 
                         <div class="main_chat p-5">
 
-                            <div class="box_message my-1" v-for="(element) in contacts[activeIndex].messages">
-                                <span class=" message p-2 message_received">
+                            <div class="box_message my-1" v-for="(element, index) in contacts[activeIndex].messages">
+                                <span class=" message p-2" :class="{message_received: element.status == `sent`, message_send: element.status == `received`}">
                                     <p class=" mb-0 "> {{ element.message }} </p>
                                     <p class="time-message mb-0 text-end text-black-50"> {{ element.date }} </p>
                                 </span>
@@ -141,7 +141,7 @@
                             <div class="icon_footer w-25">
                                 <i class="fa-solid fa-face-smile text-black-50"></i>
                             </div>
-                            <input type="text" class="form-control" placeholder="Scrivi un messaggio">
+                            <input type="text" class="form-control" placeholder="Scrivi un messaggio" v-model="newMessage" @keyUp.enter="addNewMessage(newMessage)">
                             <div class="icon_footer w-25">
                                 <i class="fa-solid fa-microphone text-black-50"></i>
                             </div>

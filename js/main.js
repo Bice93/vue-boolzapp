@@ -3,7 +3,7 @@ const app = new Vue(
         el: `#root`,
        
         data: {
-
+            newMessage:``,
             activeIndex : 0,
             contacts: [
                 {
@@ -173,6 +173,11 @@ const app = new Vue(
         methods: {
             setActiveIndex(newIndex) {
                 this.activeIndex = newIndex;
+            },
+
+            addNewMessage(currentMessage){
+                this.contacts[this.activeIndex].messages.push({date:`10/01/2020 15:51:00`, message: currentMessage, status: `received`});
+                this.newMessage=``;
             }
         },
     },
