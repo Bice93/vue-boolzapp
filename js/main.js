@@ -178,7 +178,11 @@ const app = new Vue(
             addNewMessage(currentMessage){
                 this.contacts[this.activeIndex].messages.push({date:`10/01/2020 15:51:00`, message: currentMessage, status: `received`});
                 this.newMessage=``;
-            }
+                const vm = this;
+                setTimeout(function(){ 
+                    vm.contacts[vm.activeIndex].messages.push({date:`10/01/2020 15:51:00`, message: `Ok!`, status: `sent`})
+                }, 1000);
+            },
         },
     },
 );
