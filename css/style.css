@@ -66,6 +66,7 @@ main{
     height: calc(100vh - 50px - 60px - 70px - 40px);
     background-color: white;
     overflow: auto;
+    cursor: pointer;
 }
 
 .active_bg{

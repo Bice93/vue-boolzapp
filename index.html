@@ -43,7 +43,7 @@
                                     <img class="w-100 rounded-circle" src="./img/avatar_io.jpg" alt="">
                                 </div>
                                 <div class="info">
-                                    <p class="mb-0">Nome</p>
+                                    <p class="mb-0">Sofia</p>
                                 </div>
                             </div>
                             <div class="icon_header">
@@ -72,7 +72,8 @@
                         </div>
                         <div class="list_chat">
                             <ul class="list-group list-group-flush">
-                                <li v-for="(element, index) in contacts" class="list-group-item" :class="{active_bg: index ===activeIndex}" @click="setActiveIndex(index)">
+                                <li v-for="(element, index) in contacts" class="list-group-item"
+                                    :class="{active_bg: index ===activeIndex}" @click="setActiveIndex(index)">
                                     <div class="d-flex">
                                         <div class="img_avatar">
                                             <img class="w-100 rounded-circle"
@@ -98,11 +99,12 @@
                         <div class="header_chat d-flex align-items-center">
                             <div class="avatar_header d-flex align-items-center">
                                 <div class="img_avatar">
-                                    <img class="w-100 rounded-circle" src="./img/avatar_io.jpg" alt="">
+                                    <img class="w-100 rounded-circle"
+                                        :src="`./img/avatar` + contacts[activeIndex].avatar + `.jpg`" alt="">
                                 </div>
                                 <div class="info">
-                                    <p class="mb-0">Nome</p>
-                                    <p class="mb-0">Data</p>
+                                    <p class="mb-0"> {{ contacts[activeIndex].name }} </p>
+                                    <p class="mb-0">Ultimo accesso oggi alle 12:00</p>
                                 </div>
                             </div>
                             <div class="icon_header">
@@ -139,7 +141,7 @@
                             <div class="icon_footer w-25">
                                 <i class="fa-solid fa-face-smile text-black-50"></i>
                             </div>
-                            <input type="text"class="form-control" placeholder="Scrivi un messaggio">
+                            <input type="text" class="form-control" placeholder="Scrivi un messaggio">
                             <div class="icon_footer w-25">
                                 <i class="fa-solid fa-microphone text-black-50"></i>
                             </div>
@@ -147,8 +149,9 @@
                     </div>
                 </div>
             </div>
+        </main>
     </div>
-    </main>
+
 
 
 
