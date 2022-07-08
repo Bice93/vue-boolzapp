@@ -23,17 +23,6 @@ main{
     bottom: 75px;
 }
 
-/* .ms_left_structure{
-    background-color: lightcoral;
-    border: 1px solid black;
-    padding: 0;
-}
-
-.ms_right_structure{
-    border: 1px solid black;
-    padding: 0;
-} */
-
 .header_myAccount, .header_chat, .footer_chat{
     width: 100%;
     background-color: rgb(234, 234, 234);
@@ -87,10 +76,51 @@ main{
 .main_chat{
     height: calc(100vh - 50px - 60px - 60px);
     background-image: url("../img/mine.jpg");
+    overflow: auto;
 }
 
 .footer_chat{
     text-align: center;
     background-color: #f3eeea;
 }
+
+.box_message::after{
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.message{
+    width: 300px;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+.time-message{
+    font-size: 10px;
+}
+
+.message_send{
+    float: right;
+    background-color: rgb(213, 249, 186);
+}
+
+.message_received{
+    float: left;
+    background-color: white;
+}
+
+
+
+
+/* .ms_left_structure{
+    background-color: lightcoral;
+    border: 1px solid black;
+    padding: 0;
+}
+
+.ms_right_structure{
+    border: 1px solid black;
+    padding: 0;
+} */
 
