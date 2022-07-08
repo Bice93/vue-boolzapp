@@ -169,5 +169,11 @@ const app = new Vue(
                 }
             ]
         },
+
+        methods: {
+            setActiveIndex(newIndex) {
+                this.activeIndex = newIndex;
+            }
+        },
     },
 );
