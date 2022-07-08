@@ -114,7 +114,13 @@
 
                         <div class="main_chat p-5">
 
-                            <div class="box_message my-1">
+                            <div class="box_message my-1" v-for="(element) in contacts[activeIndex].messages">
+                                <span class=" message p-2 message_received">
+                                    <p class=" mb-0 "> {{ element.message }} </p>
+                                    <p class="time-message mb-0 text-end text-black-50"> {{ element.date }} </p>
+                                </span>
+                            </div>
+                            <!-- <div class="box_message my-1">
                                 <span class="message p-2 message_send">
                                     <p class="mb-0 ">Hai portato a spasso il cane? </p>
                                     <p class="time-message mb-0 text-end text-black-50">15:30</p>
@@ -126,14 +132,14 @@
                                     <p class=" mb-0 ">Tutto fatto!</p>
                                     <p class="time-message mb-0 text-end text-black-50">15:30</p>
                                 </span>
-                            </div>
+                            </div> -->
                         </div>
 
                         <div class="footer_chat d-flex align-items-center fs-4">
                             <div class="icon_footer w-25">
                                 <i class="fa-solid fa-face-smile text-black-50"></i>
                             </div>
-                            <input type="text" class="form-control" placeholder="Scrivi un messaggio">
+                            <input type="text"class="form-control" placeholder="Scrivi un messaggio">
                             <div class="icon_footer w-25">
                                 <i class="fa-solid fa-microphone text-black-50"></i>
                             </div>
