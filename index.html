@@ -72,7 +72,7 @@
                         </div>
                         <div class="list_chat">
                             <ul class="list-group list-group-flush">
-                                <li v-for="(element, index) in contacts" class="list-group-item">
+                                <li v-for="(element, index) in contacts" class="list-group-item" :class="{active_bg: index ===activeIndex}">
                                     <div class="d-flex">
                                         <div class="img_avatar">
                                             <img class="w-100 rounded-circle"

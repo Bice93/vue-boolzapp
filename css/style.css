@@ -68,6 +68,10 @@ main{
     overflow: auto;
 }
 
+.active_bg{
+    background-color: rgb(241, 241, 241);
+}
+
 .info_time{
     width: 10%;
     font-size: 13px;
