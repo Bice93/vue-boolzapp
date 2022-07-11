@@ -189,12 +189,14 @@ const app = new Vue(
             },
 
             searchName (){
-                console.log(this.currentName)
+                //console.log(this.currentName)
                 this.contacts.forEach(element => {
+                    element.name = element.name.toLowerCase();
                     if(element.name.includes(this.currentName)){
-                        console.log(element.name)
+                       element.visible = true;
+                    } else {
+                        element.visible = false;
                     }
-                    //console.log(element.name)
                 });
                  
             }
