@@ -67,7 +67,7 @@
                             <div class="input-group input-group-sm">
                                 <span class="input-group-text" id="inputGroup-sizing-sm"><i
                                         class="fa-solid fa-magnifying-glass text-black-50"></i></span>
-                                <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat">
+                                <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" v-model="currentName" @keyup="searchName">
                             </div>
                         </div>
                         <div class="list_chat">
@@ -141,7 +141,7 @@
                             <div class="icon_footer w-25">
                                 <i class="fa-solid fa-face-smile text-black-50"></i>
                             </div>
-                            <input type="text" class="form-control" placeholder="Scrivi un messaggio" v-model="newMessage" @keyUp.enter="addNewMessage(newMessage)">
+                            <input type="text" class="form-control" placeholder="Scrivi un messaggio" v-model.trim="newMessage" @keyUp.enter="addNewMessage(newMessage)">
                             <div class="icon_footer w-25">
                                 <i class="fa-solid fa-microphone text-black-50"></i>
                             </div>

@@ -5,6 +5,7 @@ const app = new Vue(
         data: {
             newMessage:``,
             activeIndex : 0,
+            currentName: ``,
             contacts: [
                 {
                     name: 'Michele',
@@ -176,13 +177,32 @@ const app = new Vue(
             },
 
             addNewMessage(currentMessage){
-                this.contacts[this.activeIndex].messages.push({date:`10/01/2020 15:51:00`, message: currentMessage, status: `received`});
-                this.newMessage=``;
-                const vm = this;
-                setTimeout(function(){ 
-                    vm.contacts[vm.activeIndex].messages.push({date:`10/01/2020 15:51:00`, message: `Ok!`, status: `sent`})
-                }, 1000);
+                if (this.newMessage == ``){
+
+                } else {
+                    this.contacts[this.activeIndex].messages.push({date:`10/01/2020 15:51:00`, message: currentMessage, status: `received`});
+                    this.newMessage=``;
+                    setTimeout(() => {this.contacts[this.activeIndex].messages.push({date:`10/01/2020 15:51:00`, message: `Ok!`, status: `sent`})
+                    }, 1000);
+                }
+               
             },
+
+            searchName (){
+                console.log(this.currentName)
+                this.contacts.forEach(element => {
+                    if(element.name.includes(this.currentName)){
+                        console.log(element.name)
+                    }
+                    //console.log(element.name)
+                });
+                 
+            }
         },
     },
 );
+
+
+//MILESTONE 4
+// Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati solo i contatti il cui nome contiene le lettere 
+//inserite (es, Marco, Matteo Martina -> Scrivo “mar” rimangono solo Marco e Martina)
