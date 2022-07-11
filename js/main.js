@@ -169,8 +169,9 @@ const app = new Vue(
                     ],
                 }
             ]
-        },
 
+        },
+        
         methods: {
             setActiveIndex(newIndex) {
                 this.activeIndex = newIndex;
@@ -197,14 +198,12 @@ const app = new Vue(
                     } else {
                         element.visible = false;
                     }
-                });
-                 
-            }
+                });   
+            },
         },
     },
 );
 
+const date = moment(`10/01/2020 15:50:00`,`DD/MM/YYYT hh:mm:ss`);
+console.log(date)
 
-//MILESTONE 4
-// Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati solo i contatti il cui nome contiene le lettere 
-//inserite (es, Marco, Matteo Martina -> Scrivo “mar” rimangono solo Marco e Martina)
